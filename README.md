@@ -8,9 +8,10 @@ Dependencies
 * JSColor - http://jscolor.com/
 
 Example Useage:
-1. Load all libraries/dependencies into HTML (order matters)
 
-`````
+1 ) Load all libraries/dependencies into HTML (order matters)
+
+```
 <!-- Begin D3 Autocontrol Playground dependencies -->
 <script src="/scripts/vendor/d3.js"></script>
 <link rel="stylesheet" href="/scripts/vendor/d3.slider.css">
@@ -19,10 +20,11 @@ Example Useage:
 <script src="/scripts/d3.playground.js"></script>
 <script src="/scripts/d3.autocontrol.js"></script>
 <!-- End D3 Autocontrol Playground dependencies -->
-`````
-2. Use it in your d3 code
+```
 
-`````
+2 ) Use it in your d3 code
+
+```
 d3.select('svg').selectAll('circle')
   .data([1, 2, 3, 4])
     .attr('fill', 'blue',
@@ -34,9 +36,17 @@ d3.select('svg').selectAll('circle')
     .attr('cy', function (d, i) { return 20 * (i + 1); })
     .attr('r', function (d, i) { return i + 5; },
       'code', function (d, i) { return d; })
-`````
+```
 
 This code will generate a color picker, slider, and code area that all update your code automagically.
+
+Supported Controls:
+* slider
+* code
+* text
+* color
+
+WARNING: d3.autocontrol.js will invisibly modify normal D3 functions. See d3.autocontrol.js for details/controls.
 
 Author(s): [Reed Spool](https://github.com/reedspool)
 
